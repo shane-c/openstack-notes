@@ -24,10 +24,12 @@ nova-conductor module
 >Mediates interactions between the nova-compute service and the database. It eliminates direct accesses to the cloud database made by the nova-compute service. The nova-conductor module scales horizontally. However, do not deploy it on nodes where the nova-compute service runs.
 
 Networking services
+
 nova-network worker daemon
 >Similar to the nova-compute service, accepts networking tasks from the queue and manipulates the network. Performs tasks such as setting up bridging interfaces or changing IPtables rules.
 
 Console services
+
 nova-consoleauth daemon
 >Authorizes tokens for users that console proxies provide. See nova-novncproxy and nova-xvpnvcproxy. This service must be running for console proxies to work. You can run proxies of either type against a single nova-consoleauth service in a cluster configuration. For information, see About nova-consoleauth.
 
